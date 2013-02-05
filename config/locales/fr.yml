@@ -1,0 +1,35 @@
+fr:
+  refinery:
+    plugins:
+      photo_taggings:
+        title: Photo Taggings
+    photo_taggings:
+      admin:
+        photo_taggings:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Photo Tagging
+            reorder: Réordonner les Photo Taggings
+            reorder_done: Fin de réordonnancement des Photo Taggings
+          records:
+            title: Photo Taggings
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Photo Tagging. Cliquer sur "Créer un(e) nouve(au/l/lle) Photo Tagging" pour créer votre premi(er/ère) photo tagging.'
+          photo_tagging:
+            view_live_html: Voir ce(t/tte) photo tagging <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) photo tagging
+            delete: Supprimer définitivement ce(t/tte) photo tagging
+      photo_taggings:
+        show:
+          other: Autres Photo Taggings
+  activerecord:
+    attributes:
+      'refinery/photo_taggings/photo_tagging':
+        id: Id
+        photo_id: Photo
+        titel: Titel
+        x1: X1
+        y1: Y1
+        x2: X2
+        y2: Y2
+        width: Width
+        height: Height

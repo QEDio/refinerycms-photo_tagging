@@ -1,0 +1,35 @@
+sk:
+  refinery:
+    plugins:
+      photo_taggings:
+        title: Photo Taggings
+    photo_taggings:
+      admin:
+        photo_taggings:
+          actions:
+            create_new: Pridať Photo Tagging
+            reorder: Preusporiadať Photo Taggings
+            reorder_done: Koniec radenia Photo Taggings
+          records:
+            title: Photo Taggings
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Photo Taggings. Kliknite na "Pridať Photo Tagging" pre pridanie prvého photo tagging.
+          photo_tagging:
+            view_live_html: Zobraziť náhľad photo tagging<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť photo tagging
+            delete: Zmazať photo tagging
+      photo_taggings:
+        show:
+          other: Daľšie Photo Taggings
+  activerecord:
+    attributes:
+      'refinery/photo_taggings/photo_tagging':
+        id: Id
+        photo_id: Photo
+        titel: Titel
+        x1: X1
+        y1: Y1
+        x2: X2
+        y2: Y2
+        width: Width
+        height: Height

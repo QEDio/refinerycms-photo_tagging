@@ -1,0 +1,36 @@
+es:
+  refinery:
+    plugins:
+      photo_taggings:
+        title: Photo Taggings
+#        article: masculino/femenino
+    photo_taggings:
+      admin:
+        photo_taggings:
+          actions:
+            create_new: Crear nuevo photo tagging
+            reorder: Reordenar photo taggings
+            reorder_done: Reordenación de photo taggings completada
+          records:
+            title: Photo Taggings
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay photo taggings todavía. Pulsa en "Crear nuevo Photo Tagging" para crear tu primer photo tagging.
+          photo_tagging:
+            view_live_html: Ver este photo tagging como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este photo tagging
+            delete: Borrar este photo tagging para siempre
+      photo_taggings:
+        show:
+          other: Otros photo taggings
+  activerecord:
+    attributes:
+      'refinery/photo_taggings/photo_tagging':
+        id: Id
+        photo_id: Photo
+        titel: Titel
+        x1: X1
+        y1: Y1
+        x2: X2
+        y2: Y2
+        width: Width
+        height: Height

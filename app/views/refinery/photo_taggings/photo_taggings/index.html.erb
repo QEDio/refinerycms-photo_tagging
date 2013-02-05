@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="photo_taggings">
+    <% @photo_taggings.each do |photo_tagging| %>
+      <li>
+        <%= link_to photo_tagging.titel, refinery.photo_taggings_photo_tagging_path(photo_tagging) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,75 @@
+<% content_for :body_content_title do %>
+  <%= @photo_tagging.titel %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Id</h1>
+    <p>
+      <%=raw @photo_tagging.id %>
+    </p>
+  </section>
+  <section>
+    <h1>Photo</h1>
+    <p>
+      <%=raw @photo_tagging.photo_id %>
+    </p>
+  </section>
+  <section>
+    <h1>Titel</h1>
+    <p>
+      <%=raw @photo_tagging.titel %>
+    </p>
+  </section>
+  <section>
+    <h1>X1</h1>
+    <p>
+      <%=raw @photo_tagging.x1 %>
+    </p>
+  </section>
+  <section>
+    <h1>Y1</h1>
+    <p>
+      <%=raw @photo_tagging.y1 %>
+    </p>
+  </section>
+  <section>
+    <h1>X2</h1>
+    <p>
+      <%=raw @photo_tagging.x2 %>
+    </p>
+  </section>
+  <section>
+    <h1>Y2</h1>
+    <p>
+      <%=raw @photo_tagging.y2 %>
+    </p>
+  </section>
+  <section>
+    <h1>Width</h1>
+    <p>
+      <%=raw @photo_tagging.width %>
+    </p>
+  </section>
+  <section>
+    <h1>Height</h1>
+    <p>
+      <%=raw @photo_tagging.height %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="photo_taggings">
+      <% @photo_taggings.each do |photo_tagging| %>
+        <li>
+          <%= link_to photo_tagging.titel, refinery.photo_taggings_photo_tagging_path(photo_tagging) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

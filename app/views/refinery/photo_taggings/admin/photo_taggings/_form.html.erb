@@ -1,0 +1,65 @@
+<%= form_for [refinery, :photo_taggings_admin, @photo_tagging] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @photo_tagging,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :id -%>
+    <%= f.text_field :id, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :photo_id -%>
+    <%= f.text_field :photo_id  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :titel -%>
+    <%= f.text_field :titel  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :x1 -%>
+    <%= f.text_field :x1  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :y1 -%>
+    <%= f.text_field :y1  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :x2 -%>
+    <%= f.text_field :x2  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :y2 -%>
+    <%= f.text_field :y2  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :width -%>
+    <%= f.text_field :width  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :height -%>
+    <%= f.text_field :height  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.photo_taggings.admin.photo_taggings.photo_tagging'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @photo_tagging.titel) %>
+<% end -%>

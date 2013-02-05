@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::PhotoTaggings::Admin::PhotoTaggingsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.photo_taggings_admin_photo_taggings_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_photo_taggings_admin_photo_tagging_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::PhotoTaggings::Admin::PhotoTaggingsController.sortable? && ::Refinery::PhotoTaggings::PhotoTagging.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Photo Taggings"),
+                 refinery.photo_taggings_admin_photo_taggings_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Photo Taggings"),
+                 refinery.photo_taggings_admin_photo_taggings_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,35 @@
+nl:
+  refinery:
+    plugins:
+      photo_taggings:
+        title: Photo Taggings
+    photo_taggings:
+      admin:
+        photo_taggings:
+          actions:
+            create_new: Maak een nieuwe Photo Tagging
+            reorder: Wijzig de volgorde van de Photo Taggings
+            reorder_done: Klaar met het wijzingen van de volgorde van de Photo Taggings
+          records:
+            title: Photo Taggings
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Photo Taggings. Druk op 'Maak een nieuwe Photo Tagging' om de eerste aan te maken.
+          photo_tagging:
+            view_live_html: Bekijk deze photo tagging op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze photo tagging
+            delete: Verwijder deze photo tagging voor eeuwig
+      photo_taggings:
+        show:
+          other: Andere Photo Taggings
+  activerecord:
+    attributes:
+      'refinery/photo_taggings/photo_tagging':
+        id: Id
+        photo_id: Photo
+        titel: Titel
+        x1: X1
+        y1: Y1
+        x2: X2
+        y2: Y2
+        width: Width
+        height: Height
